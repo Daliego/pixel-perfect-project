@@ -5,6 +5,7 @@
   padding: 8px 15px 8px 22px;
   cursor: pointer;
   line-height: 130%;
+  max-height: 42px;
 }
 
 .list-item:hover .checkbox {
