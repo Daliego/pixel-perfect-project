@@ -67,14 +67,7 @@ export function TodoList() {
 
       <Separator />
       <div style={buttonContainer}>
-        <Button
-          onClick={
-            // TODO - add a function to handle the click event
-            () => {}
-          }
-        >
-          Done
-        </Button>
+        <Button>Done</Button>
       </div>
     </Card>
   );

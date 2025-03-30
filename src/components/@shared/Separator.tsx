@@ -9,7 +9,6 @@ const style = {
 
   container: {
     padding: "10px 15px 10px 15px",
-    // gap: "10px",
   } as React.CSSProperties,
 };
 
