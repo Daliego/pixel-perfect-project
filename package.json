@@ -1,5 +1,5 @@
 {
-  "homepage": "http://{Daliego}.github.io/{pixel-perfect-project}",
+  "homepage": "http://Daliego.github.io/pixel-perfect-project",
   "name": "todo-list-ellty-test",
   "private": true,
   "version": "0.0.0",
@@ -9,7 +9,7 @@
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "deploy": "gh-pages -d build"
+    "deploy": "pnpx gh-pages -d dist"
   },
   "dependencies": {
     "lucide-react": "^0.485.0",
