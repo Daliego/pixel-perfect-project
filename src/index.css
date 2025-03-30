@@ -1,0 +1,40 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+:root {
+  /* Border */
+  --border-foreground: #eeeeee;
+  --border-gray: #cdcdcd;
+  --border-gray-hover: #bdbdbd;
+
+  /* Website */
+  --website-orange: #ffce22;
+  --website-orange-hover: #ffd84d;
+  --website-black: #1f2128;
+
+  /* Background */
+  --background-light: #ffffff;
+
+  /* Checkbox - Check */
+  --checkbox-check-gray-normal: #e3e3e3;
+  --checkbox-check-gray-hover: #878787;
+  --checkbox-check-gray-selected: #ffffff;
+
+  /* Checkbox - Background */
+  --checkbox-background-blue-selected-hover: #5087f8;
+  --checkbox-background-blue-selected: #2469f6;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: normal;
+  font-family: "Montserrat";
+  color: #1f2128;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 249%;
+  letter-spacing: 0px;
+}
