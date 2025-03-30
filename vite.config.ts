@@ -3,6 +3,6 @@ import react from "@vitejs/plugin-react";
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: "pixel-perfect-project",
   plugins: [react()],
+  base: "/pixel-perfect-project/",
 });
