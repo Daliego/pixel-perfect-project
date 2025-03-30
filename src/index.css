@@ -24,14 +24,13 @@
   --checkbox-background-blue-selected: #2469f6;
 }
 
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-weight: normal;
   font-family: "Montserrat";
-  color: #1f2128;
+  color: var(--website-black);
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
