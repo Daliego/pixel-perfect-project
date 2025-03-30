@@ -1,4 +1,3 @@
-import { Card } from "../../components/@shared/Card";
 import { TodoList } from "../../components/home/TodoList";
 
 const style: React.CSSProperties = {
