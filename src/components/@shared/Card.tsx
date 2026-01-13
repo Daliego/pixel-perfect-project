@@ -6,10 +6,12 @@ const style: React.CSSProperties = {
   borderColor: colors.border.foreground,
   display: "flex",
   flexDirection: "column",
-  paddingTop: "10px",
-  paddingBottom: "10px",
+  alignItems: "flex-start",
+  padding: "10px 0px",
+  background: "#FFFFFF",
   boxShadow:
-    "0px 4px 4px rgba(0, 0, 0, 0.25), 0px 0px 4px rgba(20, 20, 20, 0.1)",
+    "0px 0px 4px rgba(20,20,20,0.1), 0px 8px 15px rgba(20,20,20,0.12)",
+  boxSizing: "border-box",
 };
 
 interface CardProps
