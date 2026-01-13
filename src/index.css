@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
 
 :root {
   /* Border */
@@ -28,12 +28,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-weight: normal;
-  font-family: "Montserrat";
-  color: var(--website-black);
-  font-style: normal;
+  font-family: "Montserrat", sans-serif;
   font-weight: 400;
   font-size: 14px;
   line-height: 130%;
+  color: #1F2128;
+  font-style: normal;
   letter-spacing: 0px;
 }
