@@ -1,15 +1,19 @@
 .list-item {
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
   padding: 8px 15px 8px 22px;
+  width: 370px;
+  height: 42px;
+  background: #FFFFFF;
   cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
   line-height: 130%;
-  max-height: 42px;
-}
-
-.list-item:hover .checkbox {
-  border-color: var(--border-gray-hover);
+  color: #1F2128;
+  gap: 5px;
 }
 
 .checkbox-wrapper {
@@ -18,38 +22,91 @@
   justify-content: center;
   width: 35px;
   height: 35px;
-  padding: 3px;
+  padding: 0;
+  flex-shrink: 0;
 }
 
 .checkbox {
   width: 23px;
   height: 23px;
-  border: 1px solid var(--border-gray);
+  border: 1px solid rgba(205, 205, 205, 0.6);
   border-radius: 6px;
-  background-color: var(--background-light);
+  background-color: #FFFFFF;
   display: inline-block;
   position: relative;
   cursor: pointer;
-
-  &:hover {
-    border-color: var(--border-gray-hover);
-  }
+  transition: border-color 0.15s ease;
 }
 
-.checkbox-wrapper:active .checkbox {
-  box-shadow: 0 0 0 3px rgba(36, 105, 246, 0.1);
+/* State 1: Unchecked default */
+.list-item input:not(:checked) + .checkbox {
+  border-color: rgba(205, 205, 205, 0.6);
 }
 
-.list-item:active .checkbox {
-  box-shadow: 0 0 0 3px rgba(36, 105, 246, 0.1);
+/* State 2: Unchecked hover */
+.list-item:hover input:not(:checked) + .checkbox {
+  border-color: #BDBDBD;
 }
 
+/* State 3: Unchecked active/pressed */
+.list-item:active input:not(:checked) + .checkbox {
+  border-color: #BDBDBD;
+  box-shadow: 0 0 0 3px rgba(205, 205, 205, 0.2);
+}
+
+/* State 4: Unchecked disabled */
+.list-item.disabled input:not(:checked) + .checkbox {
+  border-color: rgba(205, 205, 205, 0.3);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* State 5: Checked default */
 .list-item input:checked + .checkbox {
-  background-color: var(--checkbox-background-blue-selected);
-  border-color: var(--checkbox-background-blue-selected);
+  border-color: rgba(205, 205, 205, 0.6);
+  background-color: #FFFFFF;
 }
 
+/* State 6: Checked hover */
 .list-item:hover input:checked + .checkbox {
-  background-color: var(--checkbox-background-blue-selected-hover);
-  border-color: var(--checkbox-background-blue-selected-hover);
+  border-color: #BDBDBD;
+}
+
+/* State 7: Checked active/pressed */
+.list-item:active input:checked + .checkbox {
+  border-color: #BDBDBD;
+  box-shadow: 0 0 0 3px rgba(205, 205, 205, 0.2);
+}
+
+/* State 8: Checked disabled */
+.list-item.disabled input:checked + .checkbox {
+  border-color: rgba(205, 205, 205, 0.3);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Checkmark icon styling */
+.checkbox .check-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 16px;
+  height: 16px;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+}
+
+.list-item input:checked + .checkbox .check-icon {
+  opacity: 1;
+}
+
+/* Indeterminate state */
+.list-item input:indeterminate + .checkbox .check-icon-indeterminate {
+  opacity: 1;
+}
+
+/* Hide scrollbar for webkit browsers */
+.list-body-container::-webkit-scrollbar {
+  display: none;
 }
